@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
@@ -8,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#EBF5FB"
+    android:background="#AED6F1"
     tools:context="com.example.pumpim.ihealthkku.login">
 
     <EditText
@@ -18,19 +19,9 @@
         android:hint="Username"
         android:ems="10"
         android:id="@+id/editText"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/editText3"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="197dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="30sp"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="55dp"
-        android:id="@+id/textView" />
+        android:layout_marginBottom="13dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -38,37 +29,49 @@
         android:inputType="textPassword|textVisiblePassword"
         android:ems="10"
         android:id="@+id/editText3"
-        android:layout_below="@+id/textView"
+        android:hint="Password"
+        android:layout_above="@+id/btn_ok"
         android:layout_alignLeft="@+id/editText"
         android:layout_alignStart="@+id/editText"
-        android:hint="Password" />
-
-    <TextView
-        android:text="Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/btn_ok"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignStart="@+id/editText3" />
+        android:layout_marginBottom="12dp" />
 
     <TextView
         android:text="Forget password?"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignRight="@+id/editText3"
-        android:layout_alignEnd="@+id/editText3" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/textView3"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="OK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:id="@+id/btn_ok"
-        android:layout_below="@+id/editText3"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:textColorLink="?attr/colorPrimary"
+        android:background="#2E86C1"
+        android:layout_marginBottom="12dp"
+        android:layout_above="@+id/textView2"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/LogoCircle"
+        android:id="@+id/imageView15"
+        android:layout_above="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
